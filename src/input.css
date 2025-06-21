@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #d54222;
+  --color-black-default: #323232;
+  --color-sub-gray: #cacaca;
+  --color-backdrop: #f9f9f9;
+  --color-divider: #e7e7e7;
+  --color-green-highlight: #598a57;
+}
+
+.font-peter {
+  font-family: "Peter", sans-serif;
+}
+
+@font-face {
+  font-family: "Peter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/Peter-Test-Variable-BF641a641f2ccaa.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Peter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/Peter-Test-Medium-BF641a641eb64fa.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Peter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/Peter-Test-Bold-BF641a641f2f668.ttf") format("truetype");
+}
+
+@layer components {
+  /* fonts */
+  h2 {
+    @apply text-lg lg:text-2xl font-bold;
+  }
+
+  h3 {
+    @apply lg:text-lg font-bold;
+  }
+
+  .nav-logo {
+    @apply flex items-center gap-x-2 transform transition duration-300 ease-in-out hover:scale-115;
+  }
+
+  .nav-links {
+    @apply inline-block font-bold text-sm lg:text-lg transform transition duration-300 ease-in-out hover:scale-115;
+  }
+
+  .project-cover {
+    @apply inline-block w-full transform scale-107 transition-transform duration-300 hover:scale-100;
+  }
+
+  .project-container {
+    @apply mb-6 border-2 border-black-default w-full overflow-hidden bg-backdrop;
+  }
+
+  .divider {
+    @apply w-full h-px bg-divider;
+  }
+
+  .footer {
+    @apply py-12 lg:flex items-center justify-between;
+  }
+}
